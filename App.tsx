@@ -43,9 +43,9 @@ const App: React.FC = () => {
   useEffect(() => {
     if (i18n.language) {
       document.documentElement.lang = i18n.language;
-    }
-    if (i18n.dir && typeof i18n.dir === 'function' && i18n.language) {
-      document.documentElement.dir = i18n.dir(i18n.language);
+      if (i18n.dir && typeof i18n.dir === 'function') {
+        document.documentElement.dir = i18n.dir(i18n.language);
+      }
     }
   }, [i18n, i18n.language]);
 
