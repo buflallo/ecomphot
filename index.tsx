@@ -26,8 +26,10 @@ root.render(
 
 
 // Wait for i18n to be initialized before rendering the main app
+i18nPromise.then(() => {
   root.render(
     <React.StrictMode>
       <App />
     </React.StrictMode>
   );
+});
