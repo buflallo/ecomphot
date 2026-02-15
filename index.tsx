@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './';
-import { i18nPromise } from './';
+import App from './App';
+import { i18nPromise } from './i18n';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
