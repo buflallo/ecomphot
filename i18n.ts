@@ -4,10 +4,10 @@ import { initReactI18next } from 'react-i18next';
 const configureI18n = async () => {
   try {
     const [en, fr, es, ar] = await Promise.all([
-      fetch('./locales/en.json').then(res => res.json()),
-      fetch('./locales/fr.json').then(res => res.json()),
-      fetch('./locales/es.json').then(res => res.json()),
-      fetch('./locales/ar.json').then(res => res.json()),
+      fetch('/locales/en.json').then(res => res.json()),
+      fetch('/locales/fr.json').then(res => res.json()),
+      fetch('/locales/es.json').then(res => res.json()),
+      fetch('/locales/ar.json').then(res => res.json()),
     ]);
 
     const resources = {
